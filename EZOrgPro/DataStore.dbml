@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dwk-multiple-projects" Class="DataStoreDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=dwk-sql-server-01.database.windows.net;Initial Catalog=dwk-multiple-projects;Persist Security Info=True;User ID=TimerToysApp" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="dwk_multiple_projectsConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="ll.Links" Member="Links">
+    <Type Name="Link" Id="ID1">
+      <Column Name="[Key]" Member="Key" Type="System.String" DbType="VarChar(36) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(2083)" CanBeNull="true" />
+      <Column Name="ParentKey" Type="System.String" DbType="Char(36)" CanBeNull="true" />
+      <Column Name="SortIndex" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AllowEditing" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AllowAdding" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="ll.AddLink" Method="AddLink">
+    <Parameter Name="ParentKey" Parameter="parentKey" Type="System.String" DbType="VarChar(36)" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="ll.DeleteLink" Method="DeleteLink">
+    <Parameter Name="Key" Parameter="key" Type="System.String" DbType="Char(36)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="ll.EditLink" Method="EditLink">
+    <Parameter Name="Key" Parameter="key" Type="System.String" DbType="Char(36)" />
+    <Parameter Name="Text" Parameter="text" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Url" Parameter="url" Type="System.String" DbType="NVarChar(2083)" />
+    <Parameter Name="AllowEditing" Parameter="allowEditing" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AllowAdding" Parameter="allowAdding" Type="System.Boolean" DbType="Bit" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="ll.GetLink" Method="GetLink">
+    <Parameter Name="Key" Parameter="key" Type="System.String" DbType="Char(36)" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="ll.GetLinks" Method="GetLinks">
+    <Parameter Name="Key" Parameter="key" Type="System.String" DbType="Char(36)" />
+    <ElementType IdRef="ID1" />
+  </Function>
+</Database>

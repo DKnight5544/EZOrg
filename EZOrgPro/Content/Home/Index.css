@@ -1,0 +1,92 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.title_container {
+    width: 600px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #686868;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+    .title_container td {
+        padding: 10px;
+        box-sizing: border-box;
+        color: black;
+    }
+
+#TitleText {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+.click_counter_td {
+    width: 75px;
+}
+
+.click_counter_div {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 100%;
+}
+
+.edit_icon_td {
+    width: 16px;
+}
+/*
+    ------------------------------------------------------
+*/
+
+.link_container {
+    width: 500px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #A9A9A9;
+    border-radius: 10px;
+}
+
+    .link_container td {
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+.link_anchor {
+    text-decoration: none;
+}
+
+.link_text {
+    font-weight: bold;
+    color: black;
+}
+
+
+/*-----------------------------------------------------*/
+
+.button_container {
+    width: 500px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+
+input[type=submit] {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
